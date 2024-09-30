@@ -18,7 +18,10 @@ describe('Tour Model Test', () => {
     jest.clearAllMocks();
   });
 
-  afterAll(async () => await dbHandler.closeDatabase());
+  afterAll(async () => {
+    await dbHandler.clearDatabase();
+    await dbHandler.disconnect();
+  });
 
   it('create & save tour successfully', async () => {
     const validTour = new Tour({
