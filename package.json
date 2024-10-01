@@ -7,8 +7,8 @@
     "start": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
-    "test": "jest --runInBand ",
-    "coverage": "jest --coverage "
+    "test": "jest --runInBand --forceExit",
+    "coverage": "jest --coverage --forceExit"
   },
   "author": "Jonas Schmedtmann",
   "license": "ISC",
